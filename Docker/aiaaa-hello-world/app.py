@@ -1,17 +1,13 @@
-#   Copyright  2021 Atos Spain SA. All rights reserved.
- 
-#   This file is part of EASIER AI.
- 
 #  This service free software: you can redistribute it and/or modify it under the terms of AGPL License
- 
-#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING 
+
+#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
 #   BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT,
 #   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-#   WHETHER IN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE 
+#   WHETHER IN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 #   OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #   See  LICENSE file for full license information  in the project root.
 
-# Author: Jose Gato Luis <jose.gato@atos.net>
+# Author: Jose Gato Luis <jgato.luis@gmail.com>
 
 
 from flask import Flask
@@ -30,9 +26,9 @@ def hello():
 @app.route("/predict")
 def predict():
     elements = [("good","https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-256.png"),
-    ("bad","https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-32-256.png"), 
-    ("warm","https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-21-256.png"), 
-    ("hot","https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-256.png"), 
+    ("bad","https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-32-256.png"),
+    ("warm","https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-21-256.png"),
+    ("hot","https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-256.png"),
     ("cold","https://cdn4.iconfinder.com/data/icons/free-line-christmas-icons/24/Snowflake-256.png")]
 
     element = random.choice(elements)
