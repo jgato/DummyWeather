@@ -17,7 +17,6 @@ import random
 
 app = Flask(__name__)
 
-easier_model_version = 0
 
 @app.route("/")
 def hello():
@@ -39,9 +38,3 @@ if __name__ == "__main__":
 
     port = int(os.environ.get("PORT", 5000))
     message_from_k8s= os.environ.get('MESSAGE', 'It seems there are no messages')
-    app.run(debug=True,host='0.0.0.0',port=port)
-
-# sudo docker build -t jgato/rest-hello-world .
-# sudo docker push jgato/rest-hello-world
-# sudo docker run -it jgato/rest-hello-world  app.py
-#  sudo docker run -it --entrypoint /bin/bash jgato/rest-hello-world
