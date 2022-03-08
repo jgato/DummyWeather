@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return render_template("index.html", message=message_from_k8s)
+    return render_template("index.html")
 
 @app.route("/predict")
 def predict():
@@ -37,4 +37,4 @@ def predict():
 if __name__ == "__main__":
 
     port = int(os.environ.get("PORT", 5000))
-    message_from_k8s= os.environ.get('MESSAGE', 'It seems there are no messages')
+    # message_from_k8s= os.environ.get('MESSAGE', 'It seems there are no messages')
